@@ -7,9 +7,9 @@ import { useState } from "react";
 
 const Auth = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen ">
+    <div className="flex flex-col items-center sm:justify-center sm:mt-0 mt-16 gap-9 sm:h-[90vh] ">
       <h1 className="font-bold text-2xl">Welcome</h1>
-      <div className="w-3/4 h-80 flex justify-evenly items-center">
+      <div className="w-3/4 h-80 sm:flex justify-evenly items-center sm:gap-0 gap-9 grid ">
         <Register />
         <Login />
       </div>
@@ -28,8 +28,8 @@ const Register = () => {
     console.log(response.data.message);
   };
   return (
-    <div className="border-r-2 border-black/60 pr-56">
-      <h1 className="font-bold text-xl text-center">Register</h1>
+    <div className="sm:border-r-2 sm:border-black/60 sm:pr-56">
+      <h1 className="font-bold text-xl sm:text-center">Register</h1>
       <Form onSubmit={onSubmit} message={message} />
     </div>
   );
@@ -54,7 +54,7 @@ const Login = () => {
   };
   return (
     <div>
-      <h1 className="font-bold text-xl text-center">Login</h1>
+      <h1 className="font-bold text-xl sm:text-center">Login</h1>
       <Form onSubmit={onSubmit} />
     </div>
   );
