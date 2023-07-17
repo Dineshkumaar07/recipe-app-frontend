@@ -41,7 +41,7 @@ const CreateRecipe = () => {
                 userOwner: userId,
               });
 
-              await axios.post("http://localhost:3001/recipe/", {
+              await axios.post("https://recipe-app-backend-aaoe.onrender.com/recipe/", {
                 cookingTime: data.cookingTime,
                 image: data.image,
                 ingredient: ingredients,

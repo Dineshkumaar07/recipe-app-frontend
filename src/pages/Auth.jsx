@@ -21,7 +21,7 @@ const Register = () => {
   const [message, setMessage] = useState("");
   const onSubmit = async (data) => {
     const response = await axios.post(
-      "http://localhost:3001/auth/register",
+      "https://recipe-app-backend-aaoe.onrender.com/auth/register",
       data
     );
     setMessage(response.data.message);
@@ -41,7 +41,7 @@ const Login = () => {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/auth/login",
+        "https://recipe-app-backend-aaoe.onrender.com/auth/login",
         data
       );
 
