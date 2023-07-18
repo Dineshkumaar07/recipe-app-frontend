@@ -56,18 +56,18 @@ const Home = () => {
   return (
     <div className="h-full w-full flex flex-col items-center justify-center font-poppins  ">
       <h1 className="font-bold text-2xl">Recipes</h1>
-      <ul>
+      <ul className="flex flex-col">
         {recipes.map((recipe) => (
           <li key={recipe._id} className="max-w-4xl">
-            <div className="flex  gap-3 mt-3 border-4 border-black p-3 hover:shadow-md">
-              <div>
+            <div className="flex gap-3 mt-3 border-4 border-black p-3 hover:shadow-md ">
+              <div className="w-[250px]" >
                 <img
                   src={recipe.image}
                   alt={recipe.name}
-                  className="w-64 h-52"
+                  className="w-full h-40"
                 />
               </div>
-              <div>
+              <div className="w-3/4">
                 <h1 className="font-bold text-xl ">{recipe.name}</h1>
                 <p>{recipe.instructions}</p>
                 <p>Cooking time : {recipe.cookingTime} (min)</p>
