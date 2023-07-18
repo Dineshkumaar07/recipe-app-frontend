@@ -54,17 +54,17 @@ const Home = () => {
     }
   };
   return (
-    <div className="h-full w-full flex flex-col items-center justify-center font-poppins  ">
+    <div className="h-full w-full flex flex-col items-center justify-center font-poppins px-9 ">
       <h1 className="font-bold text-2xl">Recipes</h1>
       <ul className="flex flex-col">
         {recipes.map((recipe) => (
           <li key={recipe._id} className="max-w-4xl">
-            <div className="flex gap-3 mt-3 border-4 border-black p-3 hover:shadow-md ">
-              <div className="w-[250px]" >
+            <div className="flex flex-col sm:flex-row gap-3 mt-3 border-4 border-black p-3 hover:shadow-md ">
+              <div className="flex items-center justify-center" >
                 <img
                   src={recipe.image}
                   alt={recipe.name}
-                  className="w-full h-40"
+                  className="w-[250px]  h-40"
                 />
               </div>
               <div className="w-3/4">
